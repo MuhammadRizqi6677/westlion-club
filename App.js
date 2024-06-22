@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import DaftarMember from "./DaftarMember";
 import DetailMember from "./DetailMember";
+import Settings  from "./Settings";
 
 import HalamanLogin from "./HalamanLogin";
 import { Button, Text, View } from "react-native";
@@ -21,13 +22,12 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={HalamanUtama}
-          options={{ title: "Selamat Datang Di MemberClub" }}
+          options={{ title: "Selamat Datang Di WestLion F.C" }}
         />
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="DaftarMember" component={DaftarMember} />
         <Stack.Screen name="DetailMember" component={DetailMember} />
-        {/* <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} /> */}
+        <Stack.Screen name="Settings" component={Settings} />
       </Stack.Navigator>
     </NavigationContainer>
   );

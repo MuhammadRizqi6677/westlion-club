@@ -9,10 +9,22 @@ const HalamanUtama = ({ navigation }) => {
     },
   ];
   const handleLogout = () => {
-    // Implement any additional logout logic if needed
+    
     navigation.navigate("Login");
   };
   return (
+    <ImageBackground
+      source={require('./assets/yt.jpg')} // Ganti dengan path gambar Anda
+      style={styles.backgroundImage}
+      blurRadius={5}
+      >
+
+      <View style={styles.aboutSection}>
+        <Text style={styles.aboutText}>
+        WestLion adalah klub sepak bola profesional yang berdedikasi untuk mencapai keunggulan di dalam dan di luar lapangan. Didirikan pada tahun 2022, klub ini memiliki sejarah panjang dalam mengembangkan bakat-bakat muda dan berkompetisi di level tertinggi.
+        </Text>
+      </View>  
+      
     <View style={styles.container}>
       <View style={styles.row}>
         <TouchableOpacity
@@ -48,16 +60,32 @@ const HalamanUtama = ({ navigation }) => {
           <Text style={[styles.buttonLabel]}>Keluar</Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.aboutSection}>
+      <Text style={styles.sectionTitle}>©copyright rizqi.id</Text>
+      </View>  
     </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+  aboutSection: {
+    padding: 30,
+    backgroundColor: 'white',
+    marginTop: 20,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  aboutText: {
+    lineHeight: 24,
+  },
   backgroundImage: {
     flex: 1,
     resizeMode: 'cover', // Sesuaikan mode resize sesuai kebutuhan
     justifyContent: 'center', // Pusatkan konten secara vertikal
-    alignItems: 'center', // Pusatkan konten secara horizontal
   },
   logoutButton: {
     flex: 1, // Key for equal width: each button takes 1 share of space
