@@ -16,8 +16,8 @@ const HalamanUtama = ({ navigation }) => {
     <ImageBackground
       source={require('./assets/yt.jpg')} // Ganti dengan path gambar Anda
       style={styles.backgroundImage}
-      blurRadius={5}
-      >
+      blurRadius={6}
+      >  
 
       <View style={styles.aboutSection}>
         <Text style={styles.aboutText}>
@@ -60,8 +60,8 @@ const HalamanUtama = ({ navigation }) => {
           <Text style={[styles.buttonLabel]}>Keluar</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.aboutSection}>
-      <Text style={styles.sectionTitle}>©copyright rizqi.id</Text>
+      <View>
+      <Text style={styles.copyrightText}>©copyright rizqi.mlg.id</Text>
       </View>  
     </View>
     </ImageBackground>
@@ -70,14 +70,17 @@ const HalamanUtama = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   aboutSection: {
-    padding: 30,
+    padding: 28,
     backgroundColor: 'white',
-    marginTop: 20,
+    borderRadius: 8,
+    marginTop: 40,
   },
   sectionTitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginBottom: 20,
+    fontSize: 14,
+    fontFamily: "Arial",
+    fontWeight: "bold",
+    marginBottom: 16,
+    textAlign: 'center',
   },
   aboutText: {
     lineHeight: 24,
@@ -121,6 +124,11 @@ const styles = StyleSheet.create({
   buttonLabel: {
     color: "white",
     fontWeight: "bold",
+  },
+  copyrightText: {
+    fontSize: 14,
+    textAlign: 'center',
+    marginTop: 20,
   },
 });
 
